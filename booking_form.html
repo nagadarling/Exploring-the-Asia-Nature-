@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Form</title>
+    <style>
+        body {
+            background-color: #f4f4f4; 
+            font-family: Arial, sans-serif;
+            color: #333; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4CAF50; 
+        }
+
+        form {
+            background-color: #fff; 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 350px; 
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold; 
+        }
+
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc; 
+            border-radius: 5px;
+            transition: border-color 0.3s; 
+        }
+
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            border-color: #4CAF50; 
+            outline: none; 
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50; 
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px; 
+            transition: background-color 0.3s; 
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Travel Booking Form</h1>
+    <form action="process_booking.php" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="persons">Number of Persons:</label>
+        <input type="number" id="persons" name="persons" min="1" required>
+
+        <label for="places">Select Place:</label>
+        <select id="places" name="places" required>
+            <option value="">Select</option>
+            <option value="Manali">Manali</option>
+            <option value="Goa">Goa</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Darjeeling">Darjeeling</option>
+        </select>
+
+        <label for="days">Number of Days:</label>
+        <select id="days" name="days" required>
+            <option value="">Select</option>
+            <option value="1">1 Day</option>
+            <option value="2">2 Days</option>
+            <option value="3">3 Days</option>
+            <option value="4">4 Days</option>
+            <option value="5">5 Days</option>
+            <option value="6">6 Days</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
